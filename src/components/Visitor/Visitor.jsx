@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import "../Visitor/style/Visitor.css";
+import "../Visitor/style/visitor.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import Footer from "../User/Footer"; // Ruta actualizada
@@ -93,7 +93,7 @@ function Visitor() {
                 <div
                   className="d-flex flex-column align-items-center justify-content-center text-center text-white p-5"
                   style={{
-                    backgroundImage: "url('/Fotos/1_.jpg')",
+                    backgroundImage: "url('./public/Fotos/1_.jpg')",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     minHeight: "700px",
@@ -120,7 +120,7 @@ function Visitor() {
                 <div
                   className="d-flex flex-column align-items-center justify-content-center text-center p-5 text-dark"
                   style={{
-                    backgroundImage: "url('/Fotos/2_.jpg')",
+                    backgroundImage: "url('./public/Fotos/2_.jpg')",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     minHeight: "700px",
@@ -156,7 +156,7 @@ function Visitor() {
                 <div
                   className="d-flex flex-column align-items-center justify-content-center text-center p-5 text-dark"
                   style={{
-                    backgroundImage: "url('/Fotos/parapente-aviaciondigital.jpg')",
+                    backgroundImage: "url('./public/Fotos/parapente-aviaciondigital.jpg')",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     minHeight: "700px",

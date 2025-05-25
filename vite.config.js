@@ -3,7 +3,6 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/web.github.io/', // base para GitHub Pages
   server: {
     proxy: {
       '/api': {
