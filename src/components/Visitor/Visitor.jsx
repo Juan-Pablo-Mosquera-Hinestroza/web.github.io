@@ -44,7 +44,7 @@ function Visitor() {
             onClick={() => navigate("/visitor")}
           >
             <img
-              src="/Fotos/Parapente_logo.png"
+              src="public/Fotos/Parapente_logo.png"
               alt="SkyRush Logo"
               className="logo-navbar"
             />
@@ -93,7 +93,7 @@ function Visitor() {
                 <div
                   className="d-flex flex-column align-items-center justify-content-center text-center text-white p-5"
                   style={{
-                    backgroundImage: "url('./public/Fotos/1_.jpg')",
+                    backgroundImage: "url('public/Fotos/1_.jpg')",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     minHeight: "700px",
@@ -120,7 +120,7 @@ function Visitor() {
                 <div
                   className="d-flex flex-column align-items-center justify-content-center text-center p-5 text-dark"
                   style={{
-                    backgroundImage: "url('./public/Fotos/2_.jpg')",
+                    backgroundImage: "url('public/Fotos/2_.jpg')",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     minHeight: "700px",
@@ -156,7 +156,7 @@ function Visitor() {
                 <div
                   className="d-flex flex-column align-items-center justify-content-center text-center p-5 text-dark"
                   style={{
-                    backgroundImage: "url('./public/Fotos/parapente-aviaciondigital.jpg')",
+                    backgroundImage: "url('public/Fotos/parapente-aviaciondigital.jpg')",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     minHeight: "700px",
