@@ -35,7 +35,7 @@ export default function Horarios() {
       return;
     }
     axios
-      .get("http://localhost:5000/api/vuelos", {
+      .get("http://localhost:21243/api/vuelos", {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => setVuelos(res.data))
@@ -52,10 +52,10 @@ export default function Horarios() {
   const crearVuelo = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/vuelos", nuevoVuelo, {
+      await axios.post("http://localhost:21243/api/vuelos", nuevoVuelo, {
         headers: { Authorization: `Bearer ${token}` },
       });
-      const res = await axios.get("http://localhost:5000/api/vuelos", {
+      const res = await axios.get("http://localhost:21243/api/vuelos", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setVuelos(res.data);
@@ -76,7 +76,7 @@ export default function Horarios() {
   // Eliminar vuelo
   const eliminarVuelo = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/vuelos/${id}`, {
+      await axios.delete(`http://localhost:21243/api/vuelos/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setVuelos((v) => v.filter((vuelo) => vuelo.id !== id));
@@ -90,11 +90,11 @@ export default function Horarios() {
   const inscribirVuelo = async (id) => {
     try {
       await axios.post(
-        `http://localhost:5000/api/inscripciones/${id}`,
+        `http://localhost:21243/api/inscripciones/${id}`,
         {},
         { headers: { Authorization: `Bearer ${token}` } }
       );
-      const res = await axios.get("http://localhost:5000/api/vuelos", {
+      const res = await axios.get("http://localhost:21243/api/vuelos", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setVuelos(res.data);
@@ -121,7 +121,7 @@ export default function Horarios() {
     e.preventDefault();
     try {
       await axios.put(
-        `http://localhost:5000/api/vuelos/${editVuelo.id}`,
+        `http://localhost:21243/api/vuelos/${editVuelo.id}`,
         {
           lugar_salida: editVuelo.lugar_salida,
           lugar_llegada: editVuelo.lugar_llegada,
@@ -132,7 +132,7 @@ export default function Horarios() {
         },
         { headers: { Authorization: `Bearer ${token}` } }
       );
-      const res = await axios.get("http://localhost:5000/api/vuelos", {
+      const res = await axios.get("http://localhost:21243/api/vuelos", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setVuelos(res.data);
