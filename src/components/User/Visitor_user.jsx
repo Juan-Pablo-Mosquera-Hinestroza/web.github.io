@@ -22,7 +22,7 @@ function Visitor_user() {
 
     try {
       await axios.post(
-        "http://localhost:21243/api/inscripcion",
+        `${import.meta.env.VITE_API_URL}/api/inscripcion`,
         { deporteId: activityId },
         { headers: { Authorization: `Bearer ${userToken}` } }
       );

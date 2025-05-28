@@ -19,7 +19,7 @@ export default function VuelosInscritos() {
     }
 
     axios
-      .get("/api/inscripciones", {
+      .get(`${import.meta.env.VITE_API_URL}/api/inscripciones`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => setVuelos(res.data))

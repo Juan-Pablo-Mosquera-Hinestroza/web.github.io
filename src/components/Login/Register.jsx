@@ -28,7 +28,7 @@ function Register() {
   
     try {
       console.log("Enviando datos al servidor..."); // Depuración
-      const response = await fetch("http://localhost:21243/api/auth/register", {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/register`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(userData),
